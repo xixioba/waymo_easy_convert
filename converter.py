@@ -2,12 +2,14 @@ try:
     from waymo_open_dataset import dataset_pb2
 except ImportError:
     raise ImportError(
-        'Please run "pip install waymo-open-dataset-tf-2-1-0==1.2.0" '
-        'to install the official devkit first.')
+        'Please run inside waymo_easy_convert root dirctory')
 
 import logging
 import numpy as np
-import os, sys, glob, pickle
+import os
+import sys
+import glob
+import pickle
 from pathlib import Path
 from os.path import join, exists, dirname, abspath
 from os import makedirs
@@ -77,7 +79,8 @@ class Waymo2KITTI():
         self.lidar_list = [
             '_FRONT', '_FRONT_RIGHT', '_FRONT_LEFT', '_SIDE_RIGHT', '_SIDE_LEFT'
         ]
-        self.type_list = ['UNKNOWN', 'VEHICLE', 'PEDESTRIAN', 'SIGN', 'CYCLIST']
+        self.type_list = ['UNKNOWN', 'VEHICLE',
+                          'PEDESTRIAN', 'SIGN', 'CYCLIST']
 
         self.selected_waymo_classes = self.classes
 

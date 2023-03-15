@@ -11,7 +11,8 @@
 > Install tf, numpy, matplotlib, tqdm... used in converter.py
 
 ```bash
-python converter.py --dataset_path ../waymo_dataset [--out_path ../waymo_kitti --workers 16 --is_test false]
+python converter.py --dataset_path directory_of_tfrecord [--out_path ../waymo_kitti --workers 16 --is_test false]
+## directory_of_tfrecord should be directory
 ```
 
 for more info, see:
